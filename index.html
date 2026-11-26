@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </title> EcoTwin AI | Smart Campus Waste Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<link rel="stylesheet" href="style.css">
+<body>
+
+    <header class="navbar">
+        <div class="brand">♻ SmartWaste <span>AI</span></div>
+        <nav>
+            <a href="#dashboard">Dashboard</a>
+            <a href="#report">Report Waste</a>
+            <a href="#reports">Reports</a>
+        </nav>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <div>
+                <p class="eyebrow">SMART CAMPUS · CLEANER FUTURE</p>
+                <h1>Waste less.<br><span>Recycle smarter.</span></h1>
+                <p class="hero-text">
+                    Report campus waste, track collection points
+                    and discover better ways to dispose of waste.
+                </p>
+                <a href="#report" class="primary-btn">Report an item ↓</a>
+            </div>
+            <div class="hero-icon">🌱</div>
+        </section>
+
+        <section id="dashboard">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">OVERVIEW</p>
+                    <h2>Campus dashboard</h2>
+                </div>
+                <span class="demo-tag">DEMO DATA</span>
+            </div>
+
+            <div class="stats-grid">
+                <article class="stat-card">
+                    <div class="stat-icon">🗑️</div>
+                    <p>Total reports</p>
+                    <h3 id="totalReports">0</h3>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon">♻️</div>
+                    <p>Recyclable items</p>
+                    <h3 id="recyclableCount">0</h3>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon">🍃</div>
+                    <p>Organic items</p>
+                    <h3 id="organicCount">0</h3>
+                </article>
+
+                <article class="stat-card">
+                    <div class="stat-icon">📍</div>
+                    <p>Campus collection points</p>
+                    <h3>3</h3>
+                </article>
+            </div>
+        </section>
+
+        <section id="report" class="content-grid">
+            <div class="panel">
+                <p class="eyebrow">NEW REPORT</p>
+                <h2>Report waste</h2>
+                <p class="muted">
+                    Add an item to the campus waste dashboard.
+                </p>
+
+                <form id="wasteForm">
+                    <label for="wasteName">Waste item</label>
+                    <input id="wasteName" type="text"
+                        placeholder="e.g. Plastic water bottle" required>
+
+                    <label for="wasteCategory">Waste category</label>
+                    <select id="wasteCategory" required>
+                        <option value="Plastic">Plastic</option>
+                        <option value="Paper">Paper</option>
+                        <option value="Metal">Metal</option>
+                        <option value="Organic">Organic</option>
+                        <option value="General">General waste</option>
+                    </select>
+
+                    <label for="wasteLocation">Campus location</label>
+                    <select id="wasteLocation" required>
+                        <option value="Canteen">Canteen</option>
+                        <option value="Classroom">Classroom</option>
+                        <option value="Library">Library</option>
+                        <option value="Main Block">Main Block</option>
+                    </select>
+
+                    <label for="wasteImage">Upload waste photos (optional)</label>
+                     <input id="wasteImage" type="file"accept="image/*" multiple>
+
+                     <p class="hint">
+                       Select multiple photos. Tap × to remove any photo.
+                    </p>
+                     <div id="imagePreview" class="image-preview"></div> 
+
+                    <p class="hint">
+                        Demo version: choose the category manually.
+                        Photo-based AI classification is not connected yet.
+                    </p>
+
+                    <button type="submit" class="primary-btn full-btn">
+                        Add waste report
+                    </button>
+                </form>
+            </div>
+
+            <div class="panel recommendation-panel">
+                <p class="eyebrow">DISPOSAL GUIDE</p>
+                <h2>Waste assistant</h2>
+                <p class="muted">
+                    Select a category in the report form to see
+                    the corresponding disposal guidance here.
+                </p>
+
+                <div id="adviceBox" class="advice-box">
+                    <div class="advice-icon">💡</div>
+                    <h3>Let's sort it correctly</h3>
+                    <p>Your disposal guidance will appear here.</p>
+                </div>
+
+                <p class="hint">
+                    Guidance is illustrative. Follow your campus's
+                    local waste segregation rules.
+                </p>
+            </div>
+        </section>
+
+        <section id="reports" class="panel reports-panel">
+            <div class="section-heading">
+                <div>
+                    <p class="eyebrow">ACTIVITY</p>
+                    <h2>Recent waste reports</h2>
+                </div>
+                <span id="reportCountLabel" class="muted">0 reports</span>
+            </div>
+
+            <div id="reportList" class="report-list">
+                <div class="empty-state">
+                    <div>🌿</div>
+                    <h3>No reports yet</h3>
+                    <p>Add your first waste report above!</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>SmartWaste AI · Student hackathon prototype</p>
+            <p>Sample data only · Not connected to live campus sensors</p>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
